@@ -65,7 +65,7 @@ if (email.value !== "" && !email.value.toLowerCase().match(/^(([^<>()[\]\\.,;:\s
     } 
 
 
-if (email.value !== "" && pass.value !== "" && passcodeDiv.classList.contains("hidden")) {
+if (email.value !== "" && pass.value !== "" && passcodeDiv.classList.contains("hidden") && email.value.toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
     removeAlert();       
     clear();
     }
@@ -75,10 +75,9 @@ if (!passcodeDiv.classList.contains("hidden") && passcodeInput.value === "") {
     alert.innerHTML = "Enter Passcode";
     }
 
-if (email.value !== "" && pass.value !== "" && !passcodeDiv.classList.contains("hidden") && passcodeInput.value !== "") {
+if (email.value !== "" && pass.value !== "" && !passcodeDiv.classList.contains("hidden") && passcodeInput.value !== "" && email.value.toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
     removeAlert();       
      clear();
     }
 
 });
-
